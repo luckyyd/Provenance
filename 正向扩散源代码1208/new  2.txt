@@ -1,0 +1,13 @@
+ans =
+y =  
+  -(t*(Dx*uy*i + Dy*ux + 2*Dx*Dy*(((t*ux^2)/4 + t*uy*ux*(i/2) + 2*Dx*log(2) - 2*Dy*log(2) + Dx*log(pi) - Dy*log(pi) - (t*uy^2)/4 + Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) - Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2))*i)/(Dx - Dy)
+  -(t*(Dx*uy*i + Dy*ux - 2*Dx*Dy*(((t*ux^2)/4 + t*uy*ux*(i/2) + 2*Dx*log(2) - 2*Dy*log(2) + Dx*log(pi) - Dy*log(pi) - (t*uy^2)/4 + Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) - Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2))*i)/(Dx - Dy)
+  (t*(Dy*ux - Dx*uy*i + 2*Dx*Dy*(-((t*uy^2)/4 + t*ux*uy*(i/2) - 2*Dx*log(2) + 2*Dy*log(2) - Dx*log(pi) + Dy*log(pi) - (t*ux^2)/4 - Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) + Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2))*i)/(Dx - Dy)
+ -(t*(Dx*uy*i - Dy*ux + 2*Dx*Dy*(-((t*uy^2)/4 + t*ux*uy*(i/2) - 2*Dx*log(2) + 2*Dy*log(2) - Dx*log(pi) + Dy*log(pi) - (t*ux^2)/4 - Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) + Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2))*i)/(Dx - Dy)
+x = 
+ 
+  -(t*(Dx*uy*i + Dy*ux + 2*Dx*Dy*(((t*ux^2)/4 + t*uy*ux*(i/2) + 2*Dx*log(2) - 2*Dy*log(2) + Dx*log(pi) - Dy*log(pi) - (t*uy^2)/4 + Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) - Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2)))/(Dx - Dy)
+  -(t*(Dx*uy*i + Dy*ux - 2*Dx*Dy*(((t*ux^2)/4 + t*uy*ux*(i/2) + 2*Dx*log(2) - 2*Dy*log(2) + Dx*log(pi) - Dy*log(pi) - (t*uy^2)/4 + Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) - Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2)))/(Dx - Dy)
+ -(t*(Dy*ux - Dx*uy*i + 2*Dx*Dy*(-((t*uy^2)/4 + t*ux*uy*(i/2) - 2*Dx*log(2) + 2*Dy*log(2) - Dx*log(pi) + Dy*log(pi) - (t*ux^2)/4 - Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) + Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2)))/(Dx - Dy)
+  (t*(Dx*uy*i - Dy*ux + 2*Dx*Dy*(-((t*uy^2)/4 + t*ux*uy*(i/2) - 2*Dx*log(2) + 2*Dy*log(2) - Dx*log(pi) + Dy*log(pi) - (t*ux^2)/4 - Dx*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M) + Dy*log((C*H*t*exp(K*t)*(Dx*Dy)^(1/2))/M))/(Dx*Dy*t))^(1/2)))/(Dx - Dy)
+ 
