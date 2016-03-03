@@ -1,0 +1,8 @@
+100 10 5 4 1.5 0.25
+
+double fish_speed;
+double shrimp_speed;
+double plankton_speed;
+double water_speed;
+double north;
+double east;
