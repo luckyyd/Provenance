@@ -1,4 +1,4 @@
-function C47 = c47fun4_7
+function result = 1D-model
 %调用函数观察t = 0-8min, x = 0-500m时空范围内的浓度分布
 global x;   %为了和函数c4fun47传递数据，定义全局变量
 T = 10 * 60;    %确定最大时间段10min
@@ -45,10 +45,10 @@ title('Fig3:MyX = 300m处，瞬时源形成浓度时间分布');
 %问题（2）的解
 ii = 0;
 jj = 0;
-C47((xmax - xmin)/dx + 1,(tmax - tmin)/dt+1) = 0;
+result((xmax - xmin)/dx + 1,(tmax - tmin)/dt+1) = 0;
 for x = xmin:dx:xmax; ii = ii + 1;
         for t = tmin:dt:tmax; jj = jj + 1;
-            C47(ii,jj) = quad(@c4fun47,1,t);    %对瞬时点源模型积分
+            result(ii,jj) = quad(@c4fun47,1,t);    %对瞬时点源模型积分
         end
         jj = 0;
 end
@@ -56,7 +56,7 @@ xx = xmin:dx:xmax;
 tt = tmin:dt:tmax;
 [TT,XX] = meshgrid(tt,xx);  %生成绘图网络
 figure(4);
-surfc(TT,XX,C47);
+surfc(TT,XX,result);
 ylabel('T/s');
 xlabel('X/m');
 zlabel('C/(mg/L)');
@@ -66,13 +66,13 @@ t = tmin:dt:tmax;
 m = (MyT-tmin)/dt + 1;
 n = (MyX-xmin)/dx + 1;
 figure(5);
-plot(x,C47(:,m),'b-');
+plot(x,result(:,m),'b-');
 grid on;
 xlabel('X/m');
 ylabel('C/(mg/L)');
 title('Fig5:MyT = 8min处，连续源形成浓度空间分布');
 figure(6);
-plot(t,C47(n,:),'k-');
+plot(t,result(n,:),'k-');
 grid on;
 xlabel('T/s');
 ylabel('C/(mg/L)');

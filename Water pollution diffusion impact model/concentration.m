@@ -1,4 +1,4 @@
-function C = c4fun48(t)
+function C = concentration(t)
 global xx yy;   %为保证向c4fun48传递数据，定义全局变量xx,yy
 C0 = 6.66;  %g/m3
 Q = 30; %m3/s
