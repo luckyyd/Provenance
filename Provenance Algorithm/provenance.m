@@ -1,21 +1,8 @@
-%%
-% <html><a href="../index.html">MCMC toolbox</a> ?<a href="../examples.html">Examples</a> ?Monod model</html>
-
-%% MCMC toolbox examples
-% This example is from 
-% P. M. Berthouex and L. C. Brown:
-% _Statistics for Environmental Engineers_, CRC Press, 2002.
-%
-% We fit the Monod model
-%
-% $$ y = \theta_1 \frac{t}{\theta_2 + t} + \epsilon \quad \epsilon\sim N(0,I\sigma^2) $$
-%
-% to observations
-%
-%   x (mg / L COD):  28    55    83    110   138   225   375   
-%   y (1 / h):       0.053 0.060 0.112 0.105 0.099 0.122 0.125
-%
-
+%% DE-MCMC 
+% This model explain the provenance procedure.
+% Combined with DE-MCMC method. Input data are spatial records(tdata) with sampling
+% points positions (xdata, ydata) and pollution concentration (cdata).
+% 
 %%
 % First clear some variables from possible previous runs.
 clear data model options
@@ -36,13 +23,13 @@ clear data model options
 
 % data.tdata = [30  60  90 120 150 180 210 240 270 300 330 ]';
 data.tdata = [30  45  60  75  90 105 120 135 150 165 180 195 210 225 240 255 270 285 300 315 330]';
-%真实数据
+
 % data.cdata = [0.00022307  0.0838  0.3134  0.3879  0.3138  0.2070  0.1221  0.0674  0.0356  0.0183  0.0092 ]';
 % data.cdata = [0.00022307 0.0139 0.0838 0.2028 0.3134 0.3766 0.3879 0.3611 0.3138 0.2595 0.2070 0.1607 0.1221 0.0913 0.0674 0.0492 0.0356 0.0256 0.0183 0.0130 0.0092]';
 % data.cdata = [0.675290902 0.855683596 0.738407901 0.556047005 0.39450917 0.271846546 0.184490727 0.124189287 0.08323814 0.055672504 0.037204869 0.024862021 0.016620917 0.011119329 0.007445256 0.004989972 0.003347753 0.002248285 0.001511433 0.001017087 0.000685089]';
 data.cdata = [0.753248001 0.981585936 0.745614969 0.505651547 0.394406531 0.298951031 0.204945059 0.146641206 0.077437126 0.052015024 0.037468908 0.027567977 0.016880032 0.011892205 0.006177106 0.005366677 0.002889953 0.002170745 0.001675262 0.001144334 0.000697482 ]';
 % data.cdata = [0.703465322 0.873589593 0.677411167 0.611030689 0.400055087 0.266306349 0.169522411 0.134473031 0.083385013 0.052638362 0.038424743 0.024722048 0.018081436 0.011079192 0.007967458 0.004737707 0.003384637 0.00242308 0.00138198 0.001056046 0.000621778 ]';
-%加入噪声数据
+
 % data.cdata = [0.00022407  0.0818  0.3124  0.3479  0.3538  0.2370  0.1421  0.0274  0.0856  0.0483  0.0192 ]';
 
 % data.xdata = [0 1 2 3 4 5 6 ]';
