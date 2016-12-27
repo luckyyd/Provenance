@@ -1,4 +1,4 @@
-function result = model-TwoD
+function result = model2D
 %This is the code of continuous-temporal point-source pollutant dispersion model
 %调用函数时，输入不同时刻的T（min），观察下游污染物的空间分布图
 %从t=0.5~t=5.5
