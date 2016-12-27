@@ -9,6 +9,9 @@ The project contains 4 parts:
 * Provenance algorithm
 * Ant Colony Optimization
 
+## Sampling algorithm
+The result of sampling algorithm can be deduced by formula in the paper.
+
 ## Tracing Algorithm
 In folder "Food Chain Tracing->concentration".
 
@@ -41,8 +44,17 @@ Results:
 * The predictive posterior distribution is shown in figure 5.
 
 ## Ant Colony Optimization
-In folder "Ant Colony Optimization"
+In folder "Ant Colony Optimization->AntColonyDifference.m"
 
+>We applied ant colony algorithm in heuristic optimization. Start searching in every independent candidate position, each solution with fewer deviation compared to observable data in sampling points represents a preferable attempt and leaves positive feedback information for next iteration. Within finite iterations, heuristic search algorithms provide a good hint of the accurate source positions.
+
+Parameters:
+
+Matrix X inputs the normalized vector of pollution amounts, x coordinate and y coordinate (the provenance result of 9 sampling points from Provenance Algorithm)
+
+Output:
+* `maxX`, `maxY`, `maxZ` indicates the results of pollution amounts, x coordinate and y coordinate.
+* `maxValue` indicates the deviation of the optimization. The ant attempts in various direction to reduce the maxValue.
 
 ## Author
 Dian Yang
