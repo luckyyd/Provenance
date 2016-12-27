@@ -1,20 +1,20 @@
 function [maxX,maxY,maxValue]=AntColony
 %%初始化
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-Ant=200;  %蚂蚁数量
-Times=300;  %蚂蚁移动次数
-Rou=0.8;  %信息素挥发系数
-P0=0.2;  %转移概率常数
+Ant=200;  %number of ants
+Times=300;  %number of ant movements
+Rou=0.8;  %Pheromone evaporation coefficient 信息素挥发系数
+P0=0.2;  %Transfer rate constants 转移概率常数
 % Lower_1=-1;  %设置搜索范围
 % Upper_1=1;
 % Lower_2=-1;
 % Upper_2=1;
-Lower_1=0;  %设置搜索范围
+Lower_1=0;  %Sets the search scope设置搜索范围
 Upper_1=200;
 Lower_2=-20;
 Upper_2=20;
 
-%初始参数
+%Initial parameters 初始参数
 T = 0.5;
 t = T * 50; %s
 K = 4.2 / (24 * 60 * 60);   %s-1
@@ -40,14 +40,14 @@ mesh(x,y,z);
 hold on;
 plot3(X(:,1),X(:,2),Tau,'k*')
 hold on;
-text(0.1,0.8,-0.1,'蚂蚁的初始分布位置');
+text(0.1,0.8,-0.1,'Ants initial position蚂蚁的初始分布位置');
 xlabel('x');ylabel('y');zlabel('f(x,y)');
  
 for T=1:Times
     lamda=1/T;
     [Tau_Best(T),BestIndex]=max(Tau);
     for i=1:Ant
-        P(T,i)=(Tau(BestIndex)-Tau(i))/Tau(BestIndex);  %计算状态转移概率
+        P(T,i)=(Tau(BestIndex)-Tau(i))/Tau(BestIndex);  %State transition probability计算状态转移概率
     end
     for i=1:Ant
         if P(T,i)<P0  %局部搜索
@@ -79,7 +79,7 @@ for T=1:Times
         end
     end
     for i=1:Ant
-        Tau(i)=(1-Rou)*Tau(i)+F(X(i,1),X(i,2));  %更新信息量
+        Tau(i)=(1-Rou)*Tau(i)+F(X(i,1),X(i,2));  %Update of pheromone更新信息量
     end
 end
  
@@ -90,7 +90,7 @@ x=X(:,1);
 y=X(:,2);
 plot3(x,y,eval(f),'k*');
 hold on;
-text(0.1,0.8,-0.1,'蚂蚁的最终分布位置');
+text(0.1,0.8,-0.1,'Final distribution of the ants蚂蚁的最终分布位置');
 xlabel('x');ylabel('y');zlabel('f(x,y)');
  
 [max_value,max_index]=max(Tau);

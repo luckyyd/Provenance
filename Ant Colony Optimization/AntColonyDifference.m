@@ -2,10 +2,10 @@ function [maxX,maxY,maxValue]=AntColonyDifference
 %%初始化
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ant=200;  %蚂蚁数量
-Ant=9;
-Times=30000;  %蚂蚁移动次数
-Rou=0.8;  %信息素挥发系数
-P0=0.2;  %转移概率常数
+Ant=9;  %number of ants
+Times=30000;  %number of ant movements蚂蚁移动次数
+Rou=0.8;  %Pheromone evaporation coefficient 信息素挥发系数
+P0=0.2;  %Transfer rate constants 转移概率常数
 %设置搜索范围
 Lower_1=-10000;  %设置搜索范围
 Upper_1=10000;
